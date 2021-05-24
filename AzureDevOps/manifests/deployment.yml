@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: apijurossusep 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apijurossusep
+  template:
+    metadata:
+      labels:
+        app: apijurossusep 
+    spec:
+      containers:
+        - name: apijurossusep 
+          image: groffeazuredevops.azurecr.io/apijurossusep
+          ports:
+          - containerPort: 80
